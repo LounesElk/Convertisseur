@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">ConvertisseurMoney</string>
+
+    <string-array name="convertbase">
+        <item>Euros</item>
+        <item>Dollars</item>
+        <item>Livre</item>
+    </string-array>
+
+    <string-array name="convertc">
+        <item>Euros</item>
+        <item>Dollars</item>
+        <item>Livre</item>
+    </string-array>
+</resources>
