@@ -4,13 +4,15 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 public class Pageresultat extends AppCompatActivity {
 
     private TextView valeurC;
-    private  TextView valeurB;
-
+    private TextView valeurB;
+    private Button btRetour;
 
 
     @Override
@@ -20,20 +22,26 @@ public class Pageresultat extends AppCompatActivity {
 
         valeurB = (TextView) findViewById(R.id.valeurB);
         valeurC = (TextView) findViewById(R.id.valeurC);
+        btRetour = (Button) findViewById(R.id.btRetour);
 
         Intent afficher = getIntent();
-        String valeurDeBase = afficher.getStringExtra("valeur")+" "+afficher.getStringExtra("valeurbase");
+        String valeurDeBase = afficher.getStringExtra("valeur")+" "+afficher.getStringExtra("unitebase");
         valeurB.setText(valeurDeBase);
 
-        class Converti{
-            Intent intent = getIntent();
-            if (intent.)
-
-        }
-
-        Intent afficher2 = getIntent();
-        String valeurConverti = Converti +" "+afficher.getStringExtra("valeurbase");
+        Intent afficherValeur = getIntent();
+        String valeurConverti = afficherValeur.getStringExtra("valeurconverti")+" "+afficherValeur.getStringExtra("uniteconverti");
         valeurC.setText(valeurConverti);
 
+        btRetour.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                toBack();
+            }
+        });
+    }
+
+    private void toBack(){
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
     }
 }

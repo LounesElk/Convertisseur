@@ -17,6 +17,8 @@
 
     <TextView
         android:layout_marginTop="5pt"
+        android:textSize="20sp"
+        android:gravity="center"
         android:id="@+id/valeurB"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -24,16 +26,27 @@
 
     <TextView
         android:layout_marginTop="5pt"
+        android:textSize="20sp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:gravity="center"
         android:text="vaut"
         />
 
     <TextView
         android:layout_marginTop="5pt"
+        android:textSize="20sp"
         android:id="@+id/valeurC"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:gravity="center"
         android:text="TextView" />
+
+    <Button
+        android:layout_marginTop="20pt"
+        android:id="@+id/btRetour"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Retour à la page princpal" />
 
 </LinearLayout>
