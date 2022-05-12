@@ -82,6 +82,7 @@ public class MainActivity extends AppCompatActivity {
                 toConvert();
             }
         });
+
     }
 
     private void toConvert(){
@@ -101,17 +102,18 @@ public class MainActivity extends AppCompatActivity {
                 nb = nb/0.92;
                 test = String.valueOf(nb);
                 */
+
                 if (positonInt_base == 0) {
                     //euro
                     if (positonInt_convert == 1) { //dollar(1/1.08)
                         test = etValeur.getText().toString();
-                        nb = Integer.parseInt(test);
+                        nb = Double.parseDouble(test);
                         nb = nb / (1 / 1.08);
                         test = String.valueOf(df.format(nb));
                     }
                     if (positonInt_convert == 2) { //livre(1.19/1)
                         test = etValeur.getText().toString();
-                        nb = Integer.parseInt(test);
+                        nb = Double.parseDouble(test);
                         nb = nb / (1.19 / 1);
                         test = String.valueOf(df.format(nb));
                     }
@@ -121,13 +123,13 @@ public class MainActivity extends AppCompatActivity {
                     //dollar
                     if (positonInt_convert == 0) { //euro(1/1.08)
                         test = etValeur.getText().toString();
-                        nb = Integer.parseInt(test);
+                        nb = Double.parseDouble(test);
                         nb = nb * (1 / 1.08);
                         test = String.valueOf(df.format(nb));
                     }
                     if (positonInt_convert == 2) { //livre(1.29/1)
                         test = etValeur.getText().toString();
-                        nb = Integer.parseInt(test);
+                        nb = Double.parseDouble(test);
                         nb = nb / (1.29 / 1);
                         test = String.valueOf(df.format(nb));
                     }
@@ -137,13 +139,13 @@ public class MainActivity extends AppCompatActivity {
                     //livre
                     if (positonInt_convert == 0) { //euro(1.19/1)
                         test = etValeur.getText().toString();
-                        nb = Integer.parseInt(test);
+                        nb = Double.parseDouble(test);
                         nb = nb * (1.19 / 1);
                         test = String.valueOf(df.format(nb));
                     }
                     if (positonInt_convert == 1) { //dollar(1.29/1)
                         test = etValeur.getText().toString();
-                        nb = Integer.parseInt(test);
+                        nb = Double.parseDouble(test);
                         nb = nb * (1.29 / 1);
                         test = String.valueOf(df.format(nb));
                     }
@@ -158,6 +160,7 @@ public class MainActivity extends AppCompatActivity {
         else{
             Toast.makeText(this, "Veuillez entrer une valeur à convertir.", Toast.LENGTH_LONG).show();
         }
+
     }
 
 }
